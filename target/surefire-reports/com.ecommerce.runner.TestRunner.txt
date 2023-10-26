@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.ecommerce.runner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 86.812 s <<< FAILURE! - in com.ecommerce.runner.TestRunner
+User login and registration feature.Test user register new account  Time elapsed: 29.791 s  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.ecommerce.stepdefinitions.UserLoginAndRegistrationSteps.user_account_should_be_created_with_message(UserLoginAndRegistrationSteps.java:95)
+	at ✽.user account should be created with message "Thank you for registering with Main Website Store."(file:///A:/BDDProjects/ecommerce/src/test/resources/features/UserLoginAndRegistration.feature:24)
+

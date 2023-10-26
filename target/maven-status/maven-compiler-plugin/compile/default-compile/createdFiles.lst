@@ -1,0 +1,10 @@
+com\ecommerce\pages\MyAccountPage.class
+com\ecommerce\pages\CustomerLoginPage.class
+com\ecommerce\utilities\TempTest.class
+com\ecommerce\driver\DriverManager.class
+com\ecommerce\utilities\FakerUtils.class
+com\ecommerce\utilities\ConfigReader.class
+com\ecommerce\pages\NewCustomerAccountPage.class
+com\ecommerce\pages\HomePage.class
+com\ecommerce\pages\BasePage.class
+com\ecommerce\utilities\TestUtilities.class
