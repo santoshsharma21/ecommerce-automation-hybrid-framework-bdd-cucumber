@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.ecommerce.runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 86.812 s <<< FAILURE! - in com.ecommerce.runner.TestRunner
-User login and registration feature.Test user register new account  Time elapsed: 29.791 s  <<< FAILURE!
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 146.433 s <<< FAILURE! - in com.ecommerce.runner.TestRunner
+Product search feature.Product search using partial keyword  Time elapsed: 21.703 s  <<< FAILURE!
 java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
 	at org.junit.Assert.assertTrue(Assert.java:53)
-	at com.ecommerce.stepdefinitions.UserLoginAndRegistrationSteps.user_account_should_be_created_with_message(UserLoginAndRegistrationSteps.java:95)
-	at ✽.user account should be created with message "Thank you for registering with Main Website Store."(file:///A:/BDDProjects/ecommerce/src/test/resources/features/UserLoginAndRegistration.feature:24)
+	at com.ecommerce.stepdefinitions.ProductSearchSteps.search_result_page_should_not_contain_products_that_do_not_have_partial_keyword_in_the_name(ProductSearchSteps.java:61)
+	at ✽.search result page should not contain products that do not have partial keyword "sweat" in the name(file:///A:/BDDProjects/ecommerce/src/test/resources/features/SearchProduct.feature:16)
 

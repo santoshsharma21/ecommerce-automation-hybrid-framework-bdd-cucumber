@@ -7,4 +7,5 @@ com\ecommerce\utilities\ConfigReader.class
 com\ecommerce\pages\NewCustomerAccountPage.class
 com\ecommerce\pages\HomePage.class
 com\ecommerce\pages\BasePage.class
+com\ecommerce\pages\SearchResultPage.class
 com\ecommerce\utilities\TestUtilities.class

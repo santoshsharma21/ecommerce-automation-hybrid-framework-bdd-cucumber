@@ -41,9 +41,10 @@ public class HomePage extends BasePage {
 		return new NewCustomerAccountPage(driver);
 	}
 
-	public void searchItem(String item) {
+	public SearchResultPage searchItem(String item) {
 		performSendKey(searchtxtBox, item);
 		performClick(searchBtn);
+		return new SearchResultPage(driver);
 	}
 
 	public boolean validateLogin(String expectedTxt) {

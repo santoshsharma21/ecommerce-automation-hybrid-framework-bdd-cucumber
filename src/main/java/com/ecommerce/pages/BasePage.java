@@ -66,4 +66,15 @@ public class BasePage {
 		WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		return element.getText();
 	}
+	
+	// to check element is displayed 
+	public boolean performIsdisplay(By locator) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		return element.isDisplayed();
+	}
+	
+	public List<WebElement> getListOfElements(By locator) {
+		List<WebElement> elements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+		return elements;
+	}
 }
