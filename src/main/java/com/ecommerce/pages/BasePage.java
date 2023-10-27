@@ -73,6 +73,7 @@ public class BasePage {
 		return element.isDisplayed();
 	}
 	
+	// return list of web-elements
 	public List<WebElement> getListOfElements(By locator) {
 		List<WebElement> elements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
 		return elements;

@@ -25,18 +25,11 @@ public class TempTest {
 		
 		HomePage hp = new HomePage(driver);
 		SearchResultPage sp = new SearchResultPage(driver);
-		sp = hp.searchItem("sweat");
-		boolean status = sp.isSearchResultsNotContainKeyword("sweat");
+		sp = hp.searchItem("volleyball");
+		boolean status = sp.isSearchResultContainMessage("Your search returned no results");
 		System.out.println("Ans is = " + status);
 		
 		
-//		String s = "Grayson Crewneck Sweatshirt";
-//		String s2 = "Rapha Sports Short";
-//		if(s2.toLowerCase().contains("sports")) {
-//			System.out.println(true);
-//		} else {
-//			System.out.println(false);
-//		}
 	}
 
 }

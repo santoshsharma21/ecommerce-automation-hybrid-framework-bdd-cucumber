@@ -1,4 +1,3 @@
 com\ecommerce\runner\TestRunner.class
 com\ecommerce\hooks\ServiceHooks.class
 com\ecommerce\stepdefinitions\UserLoginAndRegistrationSteps.class
-com\ecommerce\stepdefinitions\ProductSearchSteps.class

@@ -22,6 +22,8 @@ public class SearchResultPage extends BasePage {
 	private By searchedProduct = By.xpath("//img[@alt='Grayson Crewneck Sweatshirt ']");
 	private By searchedProductName = By.xpath("//a[normalize-space()='Grayson Crewneck Sweatshirt']");
 	private By allProducts = By.xpath("//div[@class='products wrapper grid products-grid']//ol//li//div//strong//a");
+	private By notFoundMsg = By.xpath("//div[contains(text(),'Your search returned no results.')]");
+	private By colorDesc = By.xpath("//div[@class='products wrapper grid products-grid']//li[1]//div[contains(@class,'swatch-option color')]");
 	
 	// constructor
 	public SearchResultPage(WebDriver driver) {
@@ -50,6 +52,27 @@ public class SearchResultPage extends BasePage {
 				continue;
 			} else {
 				flag = false;
+				break;
+			}
+		}
+		return flag;
+	}
+	
+	public boolean isSearchResultContainMessage(String expectedMessage) {
+		boolean flag = false;
+		if(getString(notFoundMsg).contains(expectedMessage)) {
+			flag = true;
+		}
+		return flag;
+	}
+	
+	public boolean isProductDescriptionContainsKeyword() {
+		List<WebElement> colors = getListOfElements(colorDesc);
+		boolean flag = false;
+		for(WebElement color:colors) {
+			String actualKeyword = color.getAttribute("option-label");
+			if(actualKeyword.equalsIgnoreCase("blue")) {
+				flag = true;
 				break;
 			}
 		}
