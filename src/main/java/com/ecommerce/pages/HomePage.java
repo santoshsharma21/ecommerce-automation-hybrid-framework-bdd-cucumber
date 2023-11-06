@@ -20,9 +20,12 @@ public class HomePage extends BasePage {
 	private By createaccountLinkTxt = By
 			.xpath("//div[@class='panel header']//a[normalize-space()='Create an Account']");
 	private By searchtxtBox = By.id("search");
-	private By searchBtn = By.xpath("//button[@title='Search']");
+	//private By searchBtn = By.xpath("//button[@title='Search']");
+	//private By searchBtn = By.cssSelector("button[title='Search']");
 	private By welcomeTxt = By
 			.xpath("//div[@class='panel header']//span[@class='logged-in'][normalize-space()='Welcome, sony sharma!']");
+	private By cartBtn = By.xpath("//a[@class='action showcart']");
+	private By viewCartLinkTxt = By.xpath("//span[normalize-space()='View and Edit Cart']");
 
 	// constructor
 	public HomePage(WebDriver driver) {
@@ -42,8 +45,9 @@ public class HomePage extends BasePage {
 	}
 
 	public SearchResultPage searchItem(String item) {
-		performSendKey(searchtxtBox, item);
-		performClick(searchBtn);
+		performSendKeyAndEnter(searchtxtBox, item);
+		//performClick(searchBtn);
+		//performMouseHoverClick(searchBtn);
 		return new SearchResultPage(driver);
 	}
 
@@ -54,5 +58,11 @@ public class HomePage extends BasePage {
 			flag = true;
 		}
 		return flag;
+	}
+	
+	public CartPage goToCartPage() {
+		performClick(cartBtn);
+		performClick(viewCartLinkTxt);
+		return new CartPage(driver);
 	}
 }

@@ -19,11 +19,12 @@ public class SearchResultPage extends BasePage {
 	private WebDriver driver;
 	
 	// page objects
-	private By searchedProduct = By.xpath("//img[@alt='Grayson Crewneck Sweatshirt ']");
+	private By itemSweatshirt = By.xpath("//img[@alt='Grayson Crewneck Sweatshirt ']");
 	private By searchedProductName = By.xpath("//a[normalize-space()='Grayson Crewneck Sweatshirt']");
 	private By allProducts = By.xpath("//div[@class='products wrapper grid products-grid']//ol//li//div//strong//a");
 	private By notFoundMsg = By.xpath("//div[contains(text(),'Your search returned no results.')]");
 	private By colorDesc = By.xpath("//div[@class='products wrapper grid products-grid']//li[1]//div[contains(@class,'swatch-option color')]");
+	private By itemBackpack = By.xpath("//img[@alt='Driven Backpack']");
 	
 	// constructor
 	public SearchResultPage(WebDriver driver) {
@@ -33,7 +34,7 @@ public class SearchResultPage extends BasePage {
 	
 	// page action methods
 	public boolean isProductDisplayed() {
-		return performIsdisplay(searchedProduct);
+		return performIsdisplay(itemSweatshirt);
 	}
 	
 	public boolean isSearchResultContainKeyword(String expectedKeyword) {
@@ -77,6 +78,16 @@ public class SearchResultPage extends BasePage {
 			}
 		}
 		return flag;
+	}
+	
+	public ProductDetailsPage clickOnItemSweatshirt() {
+		performClick(itemSweatshirt);
+		return new ProductDetailsPage(driver);
+	}
+	
+	public ProductDetailsPage clickOnItemBackpack() {
+		performClick(itemBackpack);
+		return new ProductDetailsPage(driver);
 	}
 
 }

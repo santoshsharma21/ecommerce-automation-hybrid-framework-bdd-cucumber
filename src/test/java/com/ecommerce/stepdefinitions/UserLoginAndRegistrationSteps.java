@@ -24,18 +24,18 @@ import io.cucumber.java.en.When;
  *
  */
 public class UserLoginAndRegistrationSteps {
-	
-	private WebDriver driver;
+
+	private WebDriver driver = DriverManager.getDriver();
+
 	private ConfigReader cfg;
 	private HomePage homePage;
 	private CustomerLoginPage customerLoginPage;
 	private MyAccountPage myAccountPage;
 	private NewCustomerAccountPage newCustomerAccountPage;
-	
+
 	@Given("user is on the application home page")
 	public void user_is_on_the_application_home_page() {
 		cfg = new ConfigReader();
-		driver = DriverManager.getDriver();
 		driver.get(cfg.getUrl());
 	}
 

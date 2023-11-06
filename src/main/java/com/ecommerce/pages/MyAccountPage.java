@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 public class MyAccountPage extends BasePage {
 
 	// initialize webdriver
-	private WebDriver driver;
+	//private WebDriver driver;
 
 	// page objects
 	private By accountRegisterStatus = By.xpath("//div[@class='message-success success message']");
@@ -22,7 +22,7 @@ public class MyAccountPage extends BasePage {
 	// constructor
 	public MyAccountPage(WebDriver driver) {
 		super(driver);
-		this.driver = driver;
+		//this.driver = driver;
 	}
 	
 	// page action methods

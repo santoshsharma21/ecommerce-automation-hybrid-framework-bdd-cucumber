@@ -23,20 +23,21 @@ public class DriverManager {
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
+			//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
+			//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
 		} else if (browserName.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
+			//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		
 		} else {
 			System.out.println("invalid browser name - " + browserName);
 		}

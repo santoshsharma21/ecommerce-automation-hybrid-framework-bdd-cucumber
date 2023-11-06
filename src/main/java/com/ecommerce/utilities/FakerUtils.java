@@ -20,7 +20,7 @@ public class FakerUtils {
 
 	// return fake password
 	public static String getFakePassword() {
-		return "password@" + faker.internet().password(2,3);
+		return "password@" + faker.internet().password(2, 3);
 	}
 
 	// return fake first name and last name
@@ -31,4 +31,28 @@ public class FakerUtils {
 	public static String getFakeLastName() {
 		return faker.name().lastName();
 	}
+
+	public static String getFakeAddress() {
+		return "House No. - " + faker.address().buildingNumber();
+	}
+
+	public static String getFakeCityName() {
+		return "kanpur";
+	}
+
+	public static String getFakeStateName() {
+		return "Uttar Pradesh";
+	}
+
+	public static String getFakeZipCode() {
+		return "111223";
+	}
+
+	public static String getFakeCountryName() {
+		return "India";
+	}
+
+	public static String getFakePhoneNum() {
+		return "123456789";
+	}	
 }

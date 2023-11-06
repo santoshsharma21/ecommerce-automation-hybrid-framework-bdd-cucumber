@@ -20,7 +20,7 @@ import io.cucumber.junit.CucumberOptions;
 		glue = {"com.ecommerce.stepdefinitions", "com.ecommerce.hooks"},
 		dryRun = false,
 		monochrome = true,
-		plugin = {"pretty", "html:target/test-output/test-report.html"}
+		plugin = {"pretty", "html:target/test-output/test_report.html"}
 		)
 
 public class TestRunner {

@@ -1,3 +1,6 @@
+com\ecommerce\stepdefinitions\CartSteps.class
 com\ecommerce\runner\TestRunner.class
 com\ecommerce\hooks\ServiceHooks.class
 com\ecommerce\stepdefinitions\UserLoginAndRegistrationSteps.class
+com\ecommerce\stepdefinitions\CheckoutProcessSteps.class
+com\ecommerce\stepdefinitions\SearchProductSteps.class

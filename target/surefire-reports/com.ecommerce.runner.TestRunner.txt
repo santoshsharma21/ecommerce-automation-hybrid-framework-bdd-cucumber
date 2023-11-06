@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.ecommerce.runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 211.787 s <<< FAILURE! - in com.ecommerce.runner.TestRunner
-Product search feature.Product search using partial keyword  Time elapsed: 23.095 s  <<< FAILURE!
+Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 440.059 s <<< FAILURE! - in com.ecommerce.runner.TestRunner
+Product search feature.Product search using partial keyword  Time elapsed: 23.847 s  <<< FAILURE!
 java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
 	at org.junit.Assert.assertTrue(Assert.java:53)
-	at com.ecommerce.stepdefinitions.SearchProductSteps.search_result_page_should_not_contain_products_that_do_not_have_partial_keyword_in_the_name(SearchProductSteps.java:61)
+	at com.ecommerce.stepdefinitions.SearchProductSteps.search_result_page_should_not_contain_products_that_do_not_have_partial_keyword_in_the_name(SearchProductSteps.java:63)
 	at ✽.search result page should not contain products that do not have partial keyword "sweat" in the name(file:///A:/BDDProjects/ecommerce/src/test/resources/features/SearchProduct.feature:16)
 

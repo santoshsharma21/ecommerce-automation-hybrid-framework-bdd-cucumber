@@ -21,6 +21,7 @@ import io.cucumber.java.en.When;
 public class SearchProductSteps {
 
 	private WebDriver driver = DriverManager.getDriver();
+
 	private HomePage homePage;
 	private SearchResultPage searchResultPage;
 
@@ -43,7 +44,8 @@ public class SearchProductSteps {
 	}
 
 	@When("user enters partial keyword {string} in the search bar and submits the search")
-	public void user_enters_partial_keyword_in_the_search_bar_and_submits_the_search(String partialKeyword) {
+	public void user_enters_partial_keyword_in_the_search_bar_and_submits_the_search(String partialKeyword)
+			throws InterruptedException {
 		homePage = new HomePage(driver);
 		searchResultPage = homePage.searchItem(partialKeyword);
 	}
@@ -62,7 +64,8 @@ public class SearchProductSteps {
 	}
 
 	@When("user enters keyword with mixed case {string} in the search bar and submits the search")
-	public void user_enters_keyword_with_mixed_case_in_the_search_bar_and_submits_the_search(String mixedCaseKeyword) {
+	public void user_enters_keyword_with_mixed_case_in_the_search_bar_and_submits_the_search(String mixedCaseKeyword)
+			throws InterruptedException {
 		homePage = new HomePage(driver);
 		searchResultPage = homePage.searchItem(mixedCaseKeyword);
 	}
@@ -74,7 +77,8 @@ public class SearchProductSteps {
 	}
 
 	@When("user enters valid keyword {string} that does not match any products and submits the search")
-	public void user_enters_valid_keyword_that_does_not_match_any_products_and_submits_the_search(String keyword) {
+	public void user_enters_valid_keyword_that_does_not_match_any_products_and_submits_the_search(String keyword)
+			throws InterruptedException {
 		homePage = new HomePage(driver);
 		searchResultPage = homePage.searchItem(keyword);
 	}
@@ -86,7 +90,8 @@ public class SearchProductSteps {
 	}
 
 	@When("user enters multiple keywords {string} in the search bar and submits the search")
-	public void user_enters_multiple_keywords_in_the_search_bar_and_submits_the_search(String multipleKeyword) {
+	public void user_enters_multiple_keywords_in_the_search_bar_and_submits_the_search(String multipleKeyword)
+			throws InterruptedException {
 		homePage = new HomePage(driver);
 		searchResultPage = homePage.searchItem(multipleKeyword);
 	}
