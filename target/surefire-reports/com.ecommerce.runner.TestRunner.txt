@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.ecommerce.runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 440.059 s <<< FAILURE! - in com.ecommerce.runner.TestRunner
-Product search feature.Product search using partial keyword  Time elapsed: 23.847 s  <<< FAILURE!
+Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 395.4 s <<< FAILURE! -- in com.ecommerce.runner.TestRunner
+Product search feature.Product search using partial keyword -- Time elapsed: 17.49 s <<< FAILURE!
 java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
